@@ -1,0 +1,38 @@
+<header id="header">
+  <div class="mui-appbar mui--appbar-line-height">
+    <div class="mui-container-fluid">
+      <a class="sidedrawer-toggle mui--visible-xs-inline-block mui--visible-sm-inline-block js-show-sidedrawer">☰</a>
+      <a class="sidedrawer-toggle mui--hidden-xs mui--hidden-sm js-hide-sidedrawer">☰</a>
+      <span class="mui--text-title">Catálago</span>
+    </div>
+  </div>
+</header>
+<div class="mui-container">
+  <div class="mui-panel">
+    <div class="carrusel">
+      <h1>Novedades</h1>      
+       <!-- Swiper -->
+      <div class="swiper-container">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide" ng-repeat="carrusel in vm.catalogo" style="background: url({{carrusel.img}});background-size: 100% 100%;"></div>
+          </div>
+          <!-- Add Pagination -->
+          <!-- <div class="swiper-pagination"></div> -->
+      </div>
+
+
+    </div>
+  </div>
+  <div class="mui-panel">
+    <div class="mui-row">
+      <div class="mui-col-xs-4 mui-col-md-3" 
+           ng-repeat="catalogo in vm.catalogo" 
+           style="background: url({{catalogo.img}});background-size: 100% 100%; height: 100px;" ng-click="vm.detalle()">
+      </div>
+    </div>
+  </div>
+  <!-- <div class="mui-textfield mui-textfield--float-label">
+    <input type="text">
+    <label>Input 1</label>
+  </div> -->      
+</div>
